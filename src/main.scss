@@ -1,0 +1,53 @@
+
+body {
+    margin: 0;
+}
+
+header {
+    padding: 10px 100px;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(134, 205, 238, 0.5);
+    text-align: center;
+
+    .logo, .block {
+        padding: 10px 15px;
+    }
+
+    .menu {
+        display: flex;
+        justify-content: space-between;
+
+        .block {
+            text-transform: uppercase;
+
+            &:hover {
+                border-radius: 15px;
+                background-color: rgba(0, 0, 0, 0.06);
+            }
+        }
+    }
+}
+
+.container {
+    margin: 10px auto;
+    width: 750px;
+
+    .elements {
+        display: flex;
+        flex-wrap: wrap;
+
+        .elem {
+            width: 230px;
+            margin: 10px;
+            border-radius: 10px;
+
+            @for $i from 1 through 31 {
+                &:nth-child(#{$i}){
+                    height: random(300) + 100 + px;
+                    background-color: rgba(random(200) + 50, random(200) + 50, random(200) + 50, (random(80) + 20)/100);
+                }
+            }
+        }
+    }
+}
