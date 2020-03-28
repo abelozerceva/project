@@ -20,6 +20,12 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
   },
   module: {
+    // loaders: [
+    //   {
+    //     test: /masonry-layout/,
+    //     loader: 'imports?define=>false&this=>window'
+    //   }
+    // ],
     rules: [
     //   {
     //     test: /\.js$/,
@@ -93,9 +99,15 @@ module.exports = {
       }),
     // new VueLoaderPlugin(),
   ],
-//   resolve: {
+  resolve: {
 //     alias: {
 //       'vue': 'vue/dist/vue.esm.js'
 //     }
-//   },
+    // modulesDirectories: ['node_modules'],
+    alias:{
+      "matches-selector/matches-selector": "desandro-matches-selector",
+      "eventEmitter/EventEmitter": "wolfy87-eventemitter",
+      "get-style-property/get-style-property": "desandro-get-style-property"
+    }
+  },
 };

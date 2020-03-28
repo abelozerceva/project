@@ -4,6 +4,7 @@ html(lang="en")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title Document
         link(rel="stylesheet", href="style.css")
+
     body
         header
             .logo logo
@@ -12,9 +13,9 @@ html(lang="en")
                     .block(class=`block${i}`) text
 
         .container
-            .elements
+            .elements#masonry-grid
                 -for (i = 1; i < 31; i++)
-                    .elem(class=`elem${i}`) 
+                    .elem(class=`elem${i}`)=`${i}` 
 
 
         script(src='./main.js')

@@ -4,11 +4,12 @@ body {
 }
 
 header {
-    padding: 10px 100px;
+    padding: 10px ;
     display: flex;
     justify-content: space-between;
     background-color: rgba(134, 205, 238, 0.5);
     text-align: center;
+    box-sizing: border-box;
 
     .logo, .block {
         padding: 10px 15px;
@@ -30,15 +31,16 @@ header {
 }
 
 .container {
-    margin: 10px auto;
-    width: 750px;
 
     .elements {
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
+        margin: 10px auto;
 
         .elem {
-            width: 230px;
+            width: 40%;
+            max-width: 230px;
             margin: 10px;
             border-radius: 10px;
 
