@@ -11,11 +11,17 @@ html(lang="en")
             .menu
                 - for (i = 1; i < 6; i++)
                     .block(class=`block${i}`) text
+            .menu-btn
+                - for (i = 1; i < 4; i++)
+                    .line
 
         .container
             .elements#masonry-grid
-                -for (i = 1; i < 31; i++)
-                    .elem(class=`elem${i}`)=`${i}` 
+                -for (i = 1; i < 16; i++)
+                    .elem(class=`elem${i}`)
+                        .content
+                            h3=`${i}`
+                            p Lorem ipsum dolor sit amet.
 
 
         script(src='./main.js')
