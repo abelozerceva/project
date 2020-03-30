@@ -46,3 +46,12 @@ $('.menu-btn').on('click', () => {
 	$('header .menu').slideToggle('medium');
 	$('header .menu').toggleClass('active');
 });
+
+$('body').on("click", (el) => {
+	console.log(el);
+	console.log(el.target.classList);
+	let classList = ['line', 'menu-btn', 'menu', 'block', 'attr']
+	if (!classList.includes(el.target.classList[0])) {
+		$('header .menu').slideUp('medium');
+	}
+});

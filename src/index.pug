@@ -10,7 +10,8 @@ html(lang="en")
             .logo logo
             .menu
                 - for (i = 1; i < 6; i++)
-                    .block(class=`block${i}`) text
+                    .block(class=`block${i}`) 
+                        a.attr(href="#") text
             .menu-btn
                 - for (i = 1; i < 4; i++)
                     .line
