@@ -48,8 +48,6 @@ $('.menu-btn').on('click', () => {
 });
 
 $('body').on("click", (el) => {
-	console.log(el);
-	console.log(el.target.classList);
 	let classList = ['line', 'menu-btn', 'menu', 'block', 'attr']
 	if (!classList.includes(el.target.classList[0])) {
 		$('header .menu').slideUp('medium');
