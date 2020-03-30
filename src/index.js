@@ -49,7 +49,7 @@ $('.menu-btn').on('click', () => {
 
 $('body').on("click", (el) => {
 	let classList = ['line', 'menu-btn', 'menu', 'block', 'attr']
-	if (!classList.includes(el.target.classList[0])) {
+	if (!classList.includes(el.target.classList[0]) && window.innerWidth < 450) {
 		$('header .menu').slideUp('medium');
 	}
 });
