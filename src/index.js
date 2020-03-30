@@ -25,6 +25,7 @@ function resizeAllGridItems(){
 		$('header .menu-btn')[0].style.display = 'block';
 		$('header .menu').addClass('hidden');
 	}
+	$('header .menu').removeClass('active');
 	
 }
   
